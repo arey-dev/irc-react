@@ -9,12 +9,12 @@ import { action as rootAction } from "./routes/Rating";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/irc-react/",
     element: <Root />,
     action: rootAction,
   },
   {
-    path: "/result",
+    path: "/irc-react/result",
     element: <Result />,
     loader: resultLoader,
   },
