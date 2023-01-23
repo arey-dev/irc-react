@@ -1,5 +1,5 @@
-@import url("./styles/reset.css");
-@import url("./styles/state.css");
+@import './state.css';
+@import './reset.css';
 
 /* Base Styles */
 :root {
@@ -13,13 +13,13 @@
   --clr-neutral-800: hsl(216, 12%, 8%);
 
   /* font family */
-  --ff-main: "Overpass", sans-serif;
+  --ff-main: 'Overpass', sans-serif;
   --ff-body: var(--ff-main);
 
   /* font size */
   --fs-400: 0.9375rem;
   --fs-body: var(--fw-400);
-
+  
   /* font weight */
   --fw-700: 700;
   --fw-400: 400;
@@ -57,8 +57,8 @@ body {
 }
 
 /* General Styles */
-main {
-  display: grid;
+#root {
+display: grid;
   place-content: center;
   place-items: center;
   height: 100vh;
@@ -138,36 +138,34 @@ p {
 
 /* Interactive States */
 
-.value-wrapper,
-.button {
+.value-wrapper, .button {
   transition: background-color 0.15s, color 0.15s;
 }
 
-.value-wrapper:active,
-.value-wrapper:hover {
+.value-wrapper:active, .value-wrapper:hover {
   background-color: var(--clr-neutral-500);
   color: var(--clr-neutral-400);
 }
 
 .button:hover {
   background-color: var(--clr-neutral-400);
-  color: var(--clr-primary-400);
+  color: var(--clr-primary-400)
 }
 
 .button:focus {
   outline: 1px solid var(--clr-neutral-400);
 }
 
-.checked {
+.checked, .checked:hover  {
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-400);
 }
 
+
 /* Media queries */
 
 @media only screen and (max-width: 400px) {
-  body,
-  .button {
+  body, .button {
     font-size: 0.875rem;
   }
 
